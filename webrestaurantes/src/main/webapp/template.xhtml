@@ -137,6 +137,258 @@
 			</tr>
 		</table>
 	</div>
+	<!-- addinf register in main -->
+
+	<h:form>
+		<table>
+			<tr>
+				<td>Nickname:</td>
+				<td><h:inputText label="Nick" id="nick"
+								 value="#{userFormBackend.user.nick}" required="true"
+								 class="form-control" /> <h:message for="nick" class="warning"/></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><h:inputSecret label="Password" id="pass1"
+								   value="#{userFormBackend.password}" required="true"
+								   class="form-control" /> <h:message for="pass1" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>Password (repeat):</td>
+				<td><h:inputSecret label="Password" id="pass2"
+								   value="#{userFormBackend.password2}" required="true"
+								   class="form-control" /> <h:message for="pass2" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>First Name:</td>
+				<td><h:inputText label="First Name" id="fname"
+								 value="#{userFormBackend.user.firstName}" required="true"
+								 class="form-control" /> <h:message for="fname" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><h:inputText label="Last Name" id="lname"
+								 value="#{userFormBackend.user.lastName}" required="true"
+								 class="form-control" /> <h:message for="lname" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>Sex:</td>
+				<td><h:selectOneRadio label="Sex" id="sex"
+									  value="#{userFormBackend.user.sex}">
+					<f:selectItem itemLabel="Male" itemValue="MALE" />
+					<f:selectItem itemLabel="Female" itemValue="FEMALE" />
+				</h:selectOneRadio> <h:message for="sex" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td><h:inputText label="Date of Birth" id="dob"
+								 value="#{userFormBackend.user.dob}" required="true"
+								 Class="form-control">
+					<f:convertDateTime pattern="dd-MM-yy" />
+				</h:inputText> (dd-MM-yy) <h:message for="dob" class="warning" /></td>
+			</tr>
+			<tr>
+				<td>Email Address:</td>
+				<td><h:inputText label="Email Address" id="email"
+								 value="#{userFormBackend.user.email}" required="true"
+								 validator="#{userFormBackend.validateEmail}"
+								 Class="form-control" /> <h:message for="email" class="warning" /></td>
+			</tr>
+		</table>
+		<p>
+			<h:commandButton value="SEND"
+							 action="#{userFormBackend.addConfirmedUser}"
+							 styleClass="btn btn-primary" />
+		</p>
+	</h:form>
+	<hr>
+
+	</hr>
+	<!--<div class="container">-->
+		<!--<h3 id="products" style="color: blue;">Products</h3><br/>-->
+
+		<!--<div class="row">-->
+
+			<!--<div class="col-md-3 product ">-->
+				<!--<img src="img/NewTems/306x134_cbo_1.png" alt="" style="width: auto;height:auto;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity" />-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/Cheesy-Bacon-Cheeseburger-1.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity"/>-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+
+
+
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/nv7pcd9uewwy.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity" />-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/20328750068cde5e0b37b84afe8785f1.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity"/>-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+			<!--&lt;!&ndash; My old items &ndash;&gt;-->
+
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/f65921c31497642763c835aa9bf31ed5.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity" />-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/f65921c31497642763c835aa9bf31ed5.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity" />-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/f65921c31497642763c835aa9bf31ed5.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input" value="Quantity"/>-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+			<!--<div class="col-md-3 product">-->
+				<!--<img src="img/NewTems/f65921c31497642763c835aa9bf31ed5.jpg" alt="" style="width: 220px;height:190px;"/>-->
+				<!--<br/>-->
+				<!--<hr/>-->
+				<!--<br/>-->
+
+				<!--<p><b>This Item </b></p>-->
+				<!--<p>Material : Plastic</p>-->
+				<!--<p>Dimensions : 25cm</p>-->
+				<!--<p>Origin: Spain</p>-->
+				<!--<br/>-->
+				<!--<p>Price : 8$ (0.00061266 BTC)</p>-->
+				<!--<form action="payment.php" method="post">-->
+					<!--<input type="number" name="quantity" class="input"  />-->
+					<!--<input type="hidden" value="425" name="price"/>-->
+					<!--<input type="hidden" value="This Item" name="name"/>-->
+					<!--<input type="submit" name="order" value="Order" class="input"/>-->
+				<!--</form>-->
+
+			<!--</div>-->
+
+
+
+		<!--</div>-->
+	<!--</div>-->
+
+
+
+
+
+
+
+	<!-- en register in main -->
 	<div class="footer">
 		<div>(c) 2019 Antonio Nicolau Batle </div>
 		<h:messages globalOnly="true" />

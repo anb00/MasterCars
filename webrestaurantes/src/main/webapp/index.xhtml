@@ -14,43 +14,59 @@
 		
 		<ui:define name="page_middle">
 			<div class="container">
+				<h3 id="products" style="color: blue;">Products</h3><br/>
+
 				<div class="row">
-					<div class="ten columns">
-						<div align="center">
-												<strong><span style="font-size:20px;color: #001;">HERE YOU CAN FIND A GOOD RESTAURANT FOR EAT</span></strong>
-<table class="table1">
+					<h:dataTable value="#{restaurantFormBackend.list}" var="item"
+								 border="0">
+					<div class="col-md-3 product ">
+						<h:column>
+							<div style="background: #110000;text-shadow: 1px 1px 2px yellow;"><f:facet name="header"  >Image</f:facet></div>
+							<h:graphicImage url="#{item.imageUrl}" width="258"
+											rendered="#{item.imageUrl ne null}" />
+							<h:graphicImage url="img/default_image.jpeg"
+											rendered="#{item.imageUrl eq null}" />
+						</h:column>	<br/>
+						<hr/>
+						<br/>
 
-	<tbody>
+						<p><b><h:column>
+							<f:facet name="header" class="c" style="background: #220000;text-shadow: 1px 1px 2px black">Name</f:facet>
+							<h:link outcome="restaurant" value="#{item.name}">
+								<f:param name="ID" value="#{item.id}" />
+							</h:link>
+						</h:column> </b></p>
+						<p><h:column>
+							<f:facet name="header" style="background: #330000;text-shadow: 1px 1px 2px black">Location</f:facet>
+							<h:outputText value="#{item.location}" />
+						</h:column></p>
+						<p><h:column>
+							<f:facet name="header" class="c" style="background: #440000;text-shadow: 1px 1px 2px black;">CAT/RAT</f:facet>
+							<h:outputText value="#{item.cathegory}" />
+						</h:column></p>
+						<p>Origin: Spain</p>
+						<br/>
+						<p>Price : 8$ (0.00061266 BTC)</p>
+						<form action="payment.php" method="post">
+							<input type="number" name="quantity" class="input" value="Quantity" />
+							<input type="hidden" value="425" name="price"/>
+							<input type="hidden" value="This Item" name="name"/>
+							<input type="submit" name="order" value="Order" class="input"/>
+						</form>
 
-						<h:dataTable value="#{restaurantFormBackend.list}" var="item"
-							border="0">
-
-							<h:column>
-								<div style="background: #110000;text-shadow: 1px 1px 2px yellow;"><f:facet name="header"  >Image</f:facet></div>
-								<h:graphicImage url="#{item.imageUrl}" width="258"
-									rendered="#{item.imageUrl ne null}" />
-								<h:graphicImage url="img/default_image.jpeg"
-									rendered="#{item.imageUrl eq null}" />
-							</h:column>
-							<h:column>
-								<f:facet name="header" class="c" style="background: #220000;text-shadow: 1px 1px 2px black">Name</f:facet>
-								<h:link outcome="restaurant" value="#{item.name}">
-									<f:param name="ID" value="#{item.id}" />
-								</h:link>
-							</h:column>
-							<h:column>
-								<f:facet name="header" style="background: #330000;text-shadow: 1px 1px 2px black">Location</f:facet>
-								<h:outputText value="#{item.location}" />
-							</h:column>
-							<h:column>
-								<f:facet name="header" class="c" style="background: #440000;text-shadow: 1px 1px 2px black;">CAT/RAT</f:facet>
-								<h:outputText value="#{item.cathegory}" />
-							</h:column>
-						</h:dataTable>
-	</tbody>
-</table>
-						</div>
 					</div>
+
+
+
+
+
+
+
+
+						</h:dataTable>
+
+
+
 				</div>
 			</div>
 		</ui:define>
