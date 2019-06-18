@@ -1,0 +1,123 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Page Title</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="css/whim.css">
+        </head>
+        <body>
+    
+        <style>
+            .payment{
+                border:1px solid rgba(0,0,0,0.2);
+                padding:10px;
+                margin:100px auto;
+                width:70%;
+                background: #676767;
+                border-radius:5px;
+                color:white;
+            }
+            .time-left{
+                margin:10px auto;
+                width:70%;
+                text-align:center;
+                border:1px solid rgba(0,0,0,0.8);
+            }
+            .your-time{
+                margin:10px auto;
+                width:70%;
+                color:white;
+            }
+            @keyframes loading{
+                0%{
+                    width:0%;
+                    background-color: #496afd;
+                }
+                10%{
+                    background-color: #496afd;
+                }
+                20%{
+                    background-color: #496afd;
+                }
+                30%{
+                    background-color: #496afd;
+                }
+                40%{
+                    background-color: #496afd;
+                }
+                70%{
+                    background-color: #496afd;
+                }
+                95%{
+                    background-color:tomato;
+                }
+                100%{
+                    width:100%;
+                    background-color:red;
+                }
+            }
+            .time{
+                width:0%;
+                padding:5px 0;
+                animation:loading 1800s;
+                
+                background-color: #496afd;
+            }
+            .wallet{
+                border:1px solid rgba(0,0,0,0.2);
+                padding:5px;
+                background:rgb(69, 150, 255);
+                color:white;
+                font-family:Helvetica;
+                border-radius:5px;
+            }
+            .input{
+                width: 97%;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+        </style>
+    
+        <div class="payment">
+                    <p>Make sure you make payment to this bitcoin wallet <span class="wallet">13TtMphEC9q7ruCpcSVu5u5sJ57M3bgmTF</span> within 30 minutes.
+            <br>
+
+            <br>
+    
+            Product name : Heckler & Koch MP5 A5 .22LR    
+            <br>
+    
+            Quantity : -2    
+            <br>
+    
+            Your total price is <b>$-850 (-0.09166 BTC)</b>
+    
+            <br><br>
+    
+            <textarea name="" class="input" placeholder="Enter your shipping address here" id="" cols="30" rows="10" required></textarea>
+            <br>
+            Enter your bitcoin wallet ID here so we can confirm your transaction or refund if we fail to fulfill your order.
+                        <form action="" method="post">
+            <input type="text" name="user-wallet" class="input" required>
+            <br>
+            Click this button when you made your payment already.
+            
+                <input type="submit" name="pay" class="input" value="Submit your order">
+            </form>
+            </p>
+    
+    
+        </div>
+        <div class="your-time">Time left to pay ( DON'T LEAVE THIS PAGE TILL YOU PAY )</div>
+        <div class="time-left">
+            <div class="time"></div>
+        </div>
+    
+    
+            
+        </body>
+        </html>
+        

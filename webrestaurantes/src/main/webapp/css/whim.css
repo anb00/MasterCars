@@ -1,0 +1,153 @@
+@import "bootstrap-grid.min.css";
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Helvetica;
+   
+   background: url(../img/NewTems/fon.jpg);
+    background-repeat: repeat;
+}
+.logo {
+    font-family:F25_Bank_Printer_Bold ;
+    font-size: 29px;
+    color: white;
+}
+hr{
+    border-color: rgb(69, 150, 255);
+}
+.clear{
+    clear: both;
+}
+.header{
+    background-color: #000;
+/*      background-image: url(../img/NewTems/depositphotos_2699982-stock-photo-seamless-pattern-composed-of-diamonds.jpg);
+*/}
+.header ul{
+    list-style: none;
+}
+.header ul li{
+    float: left;
+    padding: 8px 15px;
+    color: #ffffff;
+}
+.header ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.website-info{
+    padding: 15px;
+    background: lightgrey;
+    color: #000;
+    border-radius: 7px;
+}
+.sign-in{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background: #4d525b;
+}
+.sign-in h3{
+    color: white;
+}
+.input{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.animated {
+    -webkit-animation: 1s ease;
+       -moz-animation: 1s ease;
+        -ms-animation: 1s ease;
+         -o-animation: 1s ease;
+            animation: 1s ease;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+        -ms-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+.product{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px rgb(0,100,0);
+    margin-bottom: 20px;
+}
+.product:nth-child(odd)
+{
+    background: #000;
+}
+.product:nth-child(even)
+{
+    background: #000;
+}
+.product img{
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+@keyframes fade{
+    1%{
+        opacity:1;
+    }
+    40%{
+        opacity:0.8;
+    }
+    75%{
+        opacity:0.6;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+.alert{
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000000;
+    background-color: #496afd;
+    color: #e2e2e2;
+    padding: 8px 15px;
+}
+.done{
+    background-color: #008060;
+}
+input[type=submit]{
+    transition: 0.3s;
+    background-color: #141414;
+    color: #e2e2e2;
+}
+input[type=submit]:hover{
+    background-color: #2a2c2e;
+    color: #e2e2e2;
+}
+input[type=text],input[type=password],input[type=number],textarea{
+    background-color: #4d525b;
+    color: #e2e2e2;
+}
+/*select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-image: url(../img/NewTems/depositphotos_2699982-stock-photo-seamless-pattern-composed-of-diamonds.jpg);
+    background-repeat: repeat;
+    background-position: 98% center;
+    padding-right: 20px!important;
+    line-height: 20px;
+}*/
+#products{
+    color: #eeeeee;
+}
+.comment h3{
+    color: white;
+}
+.comment-user{
+    color: white;
+    background: #2a2c2e;
+    border-radius: 5px;
+    padding: 10px 8px;
+}
